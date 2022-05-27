@@ -43,7 +43,7 @@ footer: "Raffaele Todesco - Swarm Intelligence"
 
 ## CamBots behaviour
 
-![bg height:65%](https://mermaid.ink/img/pako:eNqF0j1PwzAQBuC_cvLA1C6MGZhaiQEBglYsWQ7fNTV1bMsfIFT1v3NuUtpUQmRJ5Dx-fWd7r7QnVo1KGTMvDHYR-_nnbetAnuMgtGrtrEdighd05Ht4Q7trFWCCEr-m9OEPaK_hPSMZ18HKw9P7B-s8uG32U_ds9K66dZi4UKZsEX0I1V0iGrOkSpjP72o4NKMA4iwvpoHUX5WEImJVYuQMJgFa0znp5wb8MEvGtPWJgZ0v3XY6ua5zzjcJQ2CMpyUk-owe_WUixmiumL3MEhNkH6SQEgZlx5b-Szs5qp0vjzXLnnFIkAI78Q4cpzxgumzjd0dD9JqpRK7hqWjNKW2KVTPVc-zRkFyffQ1oVd5yz61q5JMwytG37iCuBJJTWpLJPqpmgzbxTGHJ_vXbadXkWPiExis4qsMP7XbcAA)
+![height:50%](https://mermaid.ink/img/pako:eNqF0j1PwzAQBuC_cvLA1C6MGZhaiQEBglYsWQ7fNTV1bMsfIFT1v3NuUtpUQmRJ5Dx-fWd7r7QnVo1KGTMvDHYR-_nnbetAnuMgtGrtrEdighd05Ht4Q7trFWCCEr-m9OEPaK_hPSMZ18HKw9P7B-s8uG32U_ds9K66dZi4UKZsEX0I1V0iGrOkSpjP72o4NKMA4iwvpoHUX5WEImJVYuQMJgFa0znp5wb8MEvGtPWJgZ0v3XY6ua5zzjcJQ2CMpyUk-owe_WUixmiumL3MEhNkH6SQEgZlx5b-Szs5qp0vjzXLnnFIkAI78Q4cpzxgumzjd0dD9JqpRK7hqWjNKW2KVTPVc-zRkFyffQ1oVd5yz61q5JMwytG37iCuBJJTWpLJPqpmgzbxTGHJ_vXbadXkWPiExis4qsMP7XbcAA)
 
 ---
 
@@ -78,7 +78,7 @@ footer: "Raffaele Todesco - Swarm Intelligence"
 ## Conclusion
 
 -   Larger swarms do not always yield better results
--   GroundBots are the key performance drivers
+-   CamBots are the key performance drivers
 -   Physical interference is a real problem
 -   Reality gap is not faced yet
 
