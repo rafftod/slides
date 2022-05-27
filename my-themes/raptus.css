@@ -1,0 +1,47 @@
+/* @theme raptus */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap");
+@import-theme "default";
+section {
+  height: 720px;
+  width: 1280px;
+  justify-content: flex-start;
+  font-family: "Fira Sans", "Roboto";
+  font-weight: bold;
+}
+section:where(.lead) {
+  justify-content: center;
+  text-align: center;
+}
+section:where(.default) h1 {
+  position: absolute;
+  top: 80px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.7em;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  justify-content: flex-start;
+  text-align: center;
+}
+
+li + li {
+  margin-top: 20px;
+}
+
+ul ul {
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=raptus.css.map */
