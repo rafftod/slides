@@ -3,7 +3,7 @@ marp: true
 theme: raptus
 paginate: true
 class: lead
-footer: "Raffaele Todesco - Swarm Intelligence"
+footer: "Raffaele Todesco - Swarm Intelligence - 2022"
 ---
 
 <!-- paginate: false -->
