@@ -9,7 +9,7 @@ footer: "Raffaele Todesco - Swarm Intelligence - 2022"
 <!-- paginate: false -->
 <!-- class: lead -->
 
-# Swarm Intelligence
+# INFO-H414 - Swarm Intelligence
 
 ## Project presentation
 
