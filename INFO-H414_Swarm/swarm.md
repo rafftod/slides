@@ -4,6 +4,8 @@ theme: raptus
 paginate: true
 class: lead
 footer: "Raffaele Todesco - Swarm Intelligence - 2022"
+author: Raffaele Todesco
+title: "INFO-H414 - Swarm Intelligence - Project presentation"
 ---
 
 <!-- paginate: false -->
