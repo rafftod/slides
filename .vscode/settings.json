@@ -1,5 +1,8 @@
 {
-    "markdown.marp.themes": ["./my-themes/raptus.css"],
+    "markdown.marp.themes": [
+        "./my-themes/raptus.css",
+        "./my-themes/academic.css"
+    ],
     "scss.lint.unknownAtRules": "ignore",
     "css.lint.unknownAtRules": "ignore"
 }
