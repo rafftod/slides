@@ -25,10 +25,13 @@ section::after {
     content: attr(data-marpit-pagination) "/" attr(data-marpit-pagination-total);
 }
 
+ul {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
 ul ul {
     font-size: 0.85em;
 }
-
 li + li {
     margin-top: 20px;
 }

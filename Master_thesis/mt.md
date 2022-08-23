@@ -41,7 +41,7 @@ title: "RVR : A new robot platform for swarm robotics"
 #### Objectives
 
 -   Design and implement an architecture for swarm robotics development, in order to :
-    -   Run virtual experiments with multiple RVRs and design control software within a simulation environment
+    -   Run virtual experiments with multiple RVRs and design control software within a simulation environment (ARGoS)
     -   Transpose the control software to real robot transparently
     -   Build a modular platform, both on the hardware and software sides
 -   Evaluate the quality of existing swarm robotics techniques with this platform, notably automatic
@@ -50,7 +50,7 @@ title: "RVR : A new robot platform for swarm robotics"
 
 <!-- header: The Sphero RVR -->
 
-#### The Sphero RVR
+#### Hardware architecture
 
 -   Differential treaded robot with a large sensor set :
 
@@ -63,6 +63,41 @@ title: "RVR : A new robot platform for swarm robotics"
 
 ---
 
+#### Hardware architecture
+
 slide double photos
 
 ---
+
+#### Software architecture
+
+-   Communication between the robot and the Raspberry Pi is ensured via serial and a dedicated Python API
+-   Control software, with the ARGoS simulator, is implemented in C++
+-   These two are bridged with ROS, the Robot Operating System
+
+---
+
+#### The Robot Operating System (ROS)
+
+-   ROS is a framework for creating a software infrastructure for robots
+-   It works similarly to an RSS feed :
+
+    -   The information is communicated through _topics_
+    -   Information sources _publish_ information on topics, which can then be read by _subscribers_
+    -   Each component (subscriber or publisher) is a _node_
+
+-   ROS enables communication between the robot API and the control software
+
+---
+
+#### Software architecture
+
+photos avec robot + csfw
+
+---
+
+#### Additional components
+
+-   External sensors are running their own node, requiring no additional work for their integration
+
+-   A color labeling node has been implemented to identify color labels more reliably
