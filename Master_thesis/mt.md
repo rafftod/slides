@@ -41,11 +41,11 @@ math: katex
 
 #### Objectives
 
--   Design and implement an architecture for swarm robotics development, in order to :
+-   Design and implement an architecture for swarm robotics development with the Sphero RVR robot, in order to :
     -   Run virtual experiments with multiple RVRs and design control software within a simulation environment (ARGoS)
     -   Transpose the control software to real robot transparently
     -   Build a modular platform, both on the hardware and software sides
--   Evaluate the quality of existing swarm robotics techniques with this platform, notably automatic
+-   Evaluate the quality of existing swarm robotics techniques with this platform, notably automatic design
 
 ---
 
@@ -64,9 +64,12 @@ math: katex
 
 ---
 
+<!-- _class: figure -->
+
 #### Hardware architecture
 
-slide double photos
+<img src="./images/base_rvr.png" width="500" alt="left"/>
+<img src="./images/extended_rvr.png" width="550" />
 
 ---
 
@@ -93,7 +96,7 @@ slide double photos
 
 #### Software architecture
 
-photos avec robot + csfw
+![center h:450](./images/rvr.proper.arch.png)
 
 ---
 
@@ -107,11 +110,12 @@ photos avec robot + csfw
 
 #### Software architecture
 
-photos du système final
+![center h:450](./images/rvr.final.arch.png)
 
 ---
 
 <!-- header: Simulation -->
+<!-- _class: figure -->
 
 #### Simulation
 
@@ -119,7 +123,7 @@ photos du système final
 -   The simulation is implemented in ARGoS, a physics-based simulation environment designed for swarm robotics applications
 -   A 3D model of the robot has been designed
 
-photo du machin
+![center h:450](./images/3Drvr.png)
 
 ---
 
@@ -137,6 +141,29 @@ photo du machin
 
 -   The ground color sensor provides the color of the ground under the robot
 -   The reading is a Red Green Blue (RGB) triplet
--   The sensor undergoes a Gaussian noise $N(0,5)$
+-   The sensor undergoes a Gaussian noise
 
-<img src="./images/prox_noise.png" width="450"/>
+<!-- <img src="./images/prox_noise.png" width="450"/> -->
+
+---
+
+<!-- _class: figure -->
+
+#### Proximity sensors
+
+-   The proximity sensors cast rays from the robot to the environment to detect obstacles
+-   If the distance between the robot and closest obstacle is in the sensor range, it constitutes the reading
+-   The sensor undergoes a Gaussian noise
+
+<img src="./images/prox_noise.png" height="500"/>
+
+---
+
+<!-- _class: figure -->
+
+#### Lidar
+
+-   The lidar is a long-range sensor that detects the distance to obstacles similarly to the proximity sensors
+-   The sensor undergoes a uniform noise
+
+<img src="./images/lidar_noise.png" height="500"/>

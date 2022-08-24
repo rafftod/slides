@@ -136,6 +136,10 @@ section.figure img {
     margin: 0 auto;
 }
 
+section.figure img[alt~="left"] {
+    grid-area: Text;
+}
+
 header {
     background-color: var(--color-highlight);
     color: #fff;
@@ -161,12 +165,6 @@ img[alt~="center"] {
     display: block;
     margin: 0 auto;
 }
-
-/* img[alt~="right"] {
-    display: block;
-    margin-left: 100px;
-    float: right;
-} */
 
 code {
     font-family: "Source Code Pro", monospace;
