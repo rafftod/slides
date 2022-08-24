@@ -101,3 +101,29 @@ photos avec robot + csfw
 -   External sensors are running their own node, requiring no additional work for their integration
 
 -   A color labeling node has been implemented to identify color labels more reliably
+
+---
+
+#### Software architecture
+
+photos du système final
+
+---
+
+<!-- header: Simulation -->
+
+#### Simulation
+
+-   Simulation is a key part of the development process, to allow offline design, repeatability, reproducibility and testing
+-   The simulation is implemented in ARGoS, a physics-based simulation environment designed for swarm robotics applications
+-   A 3D model of the robot has been designed
+
+photo du machin
+
+---
+
+#### Simulating sensors
+
+-   Each of the robot's sensors is simulated in ARGoS
+-   The noise of the sensors is evaluated with the real robot and generated similarly in the simulation
+-   I will only go over the sensors that were in use for this thesis experiments
