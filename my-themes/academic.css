@@ -18,6 +18,19 @@ section {
     padding-right: 40px;
 }
 
+section.figure {
+    display: grid;
+    /* flex-flow: column nowrap; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1.5fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "Title Title"
+        "Text Image";
+    align-items: center;
+    justify-items: center;
+}
+
 /* https://github.com/marp-team/marpit/issues/271 */
 section::after {
     font-weight: 700;
@@ -75,6 +88,54 @@ section.lead p {
     text-align: left;
 }
 
+section.figure h1 {
+    color: var(--color-highlight);
+    text-align: center;
+}
+section.figure h1 strong {
+    -webkit-text-stroke: 1px var(--color-highlight);
+}
+section.figure h2 {
+    color: var(--color-highlight);
+    text-align: left;
+}
+section.figure h2 strong {
+    -webkit-text-stroke: 1px var(--color-highlight);
+}
+section.figure h3 {
+    color: var(--color-highlight);
+    text-align: left;
+}
+section.figure h3 strong {
+    -webkit-text-stroke: 1px var(--color-highlight);
+}
+section.figure h4 {
+    grid-area: Title;
+    justify-self: left;
+    color: var(--color-highlight);
+    text-align: left;
+}
+section.figure h4 strong {
+    -webkit-text-stroke: 1px var(--color-highlight);
+}
+section.figure h5 {
+    color: var(--color-highlight);
+    text-align: center;
+}
+section.figure h5 strong {
+    -webkit-text-stroke: 1px var(--color-highlight);
+}
+section.figure p {
+    text-align: left;
+}
+section.figure ul {
+    grid-area: Text;
+}
+section.figure img {
+    grid-area: Image;
+    margin: 0 auto;
+}
+
 header {
     background-color: var(--color-highlight);
     color: #fff;
@@ -100,6 +161,12 @@ img[alt~="center"] {
     display: block;
     margin: 0 auto;
 }
+
+/* img[alt~="right"] {
+    display: block;
+    margin-left: 100px;
+    float: right;
+} */
 
 code {
     font-family: "Source Code Pro", monospace;

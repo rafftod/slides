@@ -6,6 +6,7 @@ class: lead
 footer: "Raffaele Todesco - Master thesis - RVR : A new robot platform for swarm robotics - 2022"
 author: Raffaele Todesco
 title: "RVR : A new robot platform for swarm robotics"
+math: katex
 ---
 
 <!-- paginate: false -->
@@ -127,3 +128,15 @@ photo du machin
 -   Each of the robot's sensors is simulated in ARGoS
 -   The noise of the sensors is evaluated with the real robot and generated similarly in the simulation
 -   I will only go over the sensors that were in use for this thesis experiments
+
+---
+
+#### Ground color sensor
+
+<!-- _class: figure -->
+
+-   The ground color sensor provides the color of the ground under the robot
+-   The reading is a Red Green Blue (RGB) triplet
+-   The sensor undergoes a Gaussian noise $N(0,5)$
+
+<img src="./images/prox_noise.png" width="450"/>
