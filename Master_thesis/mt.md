@@ -135,35 +135,60 @@ math: katex
 
 ---
 
-#### Ground color sensor
+<!-- header: Control software -->
 
-<!-- _class: figure -->
+#### Control software
 
--   The ground color sensor provides the color of the ground under the robot
--   The reading is a Red Green Blue (RGB) triplet
--   The sensor undergoes a Gaussian noise
-
-<!-- <img src="./images/prox_noise.png" width="450"/> -->
-
----
-
-<!-- _class: figure -->
-
-#### Proximity sensors
-
--   The proximity sensors cast rays from the robot to the environment to detect obstacles
--   If the distance between the robot and closest obstacle is in the sensor range, it constitutes the reading
--   The sensor undergoes a Gaussian noise
-
-<img src="./images/prox_noise.png" height="500"/>
+-   The control software defines the behavior of the robot
+-   To run experiments, the control software has to be designed by humans or in an automatic fashion
+-   Automatic modular design is less time-consuming and more efficient than human experts
+-   The control software comprises 2 layers :
+    -   The reference model
+    -   The control software
 
 ---
 
-<!-- _class: figure -->
+#### The reference model
 
-#### Lidar
+-   The reference model is a model of the robot's behavior, as input/output variables
+-   It allows an additional layer of abstraction between the control software and the robot
+-   Provides sensor data as well as extracted features, such as the neighbour positions computed with the lidar readings
 
--   The lidar is a long-range sensor that detects the distance to obstacles similarly to the proximity sensors
--   The sensor undergoes a uniform noise
+---
 
-<img src="./images/lidar_noise.png" height="500"/>
+<style scoped>
+    img[alt~="center"]{
+        margin-top: -1em
+    }
+</style>
+
+#### Example use of the reference model
+
+-   Robots in reality detect neighbours with the lidar
+-   ARGoS, for physics simulation reasons, can not simulate it and uses virtual beacons
+-   Both provide the relative positions of the neighbours and provide it as an input to the control software through the reference model
+
+![center h:180](./images/refmodel_abs.png)
+
+---
+
+#### AutoMoDe control software
+
+-   AutoMoDe is an automatic modular control software design process for swarm robotics
+-   It assembles predefined behaviours and transitions modules as a Probabilistic Finite State Machine (PFSM)
+-   Several versions (named flavours) of AutoMoDe exist, each with different modules, optimization algorithms, form of the control software, etc.
+-   All of them are designed for the e-puck robot
+
+---
+
+#### AutoMoDe-_Watermelon_
+
+| Behaviours  |       Transitions        |
+| :---------: | :----------------------: |
+| Exploration |       Black floor        |
+|    Stop     |       White floor        |
+| Attraction  |        Gray floor        |
+|  Repulsion  |     Neighbour count      |
+|             | Inverted Neighbour count |
+|             |    Fixed probability     |
+|             |     Color detection      |
