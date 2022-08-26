@@ -123,7 +123,7 @@ math: katex
 -   The simulation is implemented in ARGoS, a physics-based simulation environment designed for swarm robotics applications
 -   A 3D model of the robot has been designed
 
-![center h:450](./images/3Drvr.png)
+<img src="./images/3Drvr.png" height="450"/>
 
 ---
 
@@ -192,3 +192,114 @@ math: katex
 |             | Inverted Neighbour count |
 |             |    Fixed probability     |
 |             |     Color detection      |
+
+---
+
+<!-- header: Experiments -->
+
+#### Experiments
+
+-   4 experiments are conducted with a swarm of 3 robots :
+    -   Modules assessment
+    -   Aggregation
+    -   Grid exploration
+    -   Color selection
+-   The 3 last experiments last 120 seconds
+
+---
+
+#### Modules assessment
+
+-   Each _Watermelon_ module is evaluated to assess that the building blocks are working as expected
+-   Also allows to find the discrepancies between simulation and reality early
+
+---
+
+<!-- _class: figure -->
+
+#### Aggregation
+
+-   The robots have to aggregate on a black spot at the center of the arena
+-   Objective function is the number of robots on the black spot at the end of the experiment
+
+<img src="./images/agg_real.png" height="450"/>
+
+---
+
+<!-- _class: figure -->
+
+#### Grid exploration
+
+<style scoped>
+    li:last-child {
+        list-style-type: none;
+    }
+</style>
+
+-   The robots have to explore the arena, which is divided in a virtual grid
+-   Objective function is measured by the cumulated time, for each tile, since it was last visited by a robot
+- $$ F = -\frac{1}{N_{tiles}}\sum_{i=1}^{N_{cc}} \sum_{j=1}^{N_{tiles}}t_{ij} $$ 
+
+
+<img src="./images/cov_real.png" height="450">
+
+---
+
+<!-- _class: figure -->
+
+#### Color selection
+
+<style scoped>
+    li:last-child {
+        list-style-type: none;
+    }
+</style>
+
+-   The robots have to stand on the color that rewards the most at the end of the experiment
+-   Objective function is the cumulated reward obtained by each robot
+- $$ F = \sum_{i=1}^{N} \sum_{j=1}^{N_{colors}}r_{j}b_{ij} $$ 
+
+
+<img src="./images/col_sel_real.png" height="450">
+
+---
+
+<!-- header: Results -->
+
+#### Modules assessments
+
+- All _Watermelon_ modules work as expected
+- The discrepancies between simulation and reality are :
+   - Latency
+   - Obstacle detection
+   - Neighbour detection
+   - Timestep duration
+
+---
+<!-- _class : figure -->
+#### Aggregation
+
+<img src="./images/agg_hist.png" height="450" alt="left"/>
+
+---
+<!-- _class : figure -->
+#### Grid exploration
+
+<img src="./images/grid_boxplot.png" height="450" alt="left"/>
+
+---
+
+<!-- _class : figure -->
+#### Color selection
+
+<img src="./images/col_sel_hist.png" height="450" alt="left"/>
+
+---
+
+<!-- header: Conclusion -->
+
+#### Conclusion
+
+-   The RVR is a suitable platform for research in swarm robotics 
+-   Existing techniques such as automatic design are successfully ported to the RVR
+-   The modules should be redesigned to take full advantage of the RVR platform

@@ -127,6 +127,7 @@ section.figure h5 strong {
 }
 section.figure p {
     text-align: left;
+    grid-area: Text;
 }
 section.figure ul {
     grid-area: Text;
@@ -173,5 +174,5 @@ code {
 footer {
     justify-content: flex-start;
     text-align: center;
-    font-size: 0.5em;
+    font-size: 0.45em;
 }
