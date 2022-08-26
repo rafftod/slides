@@ -176,7 +176,7 @@ math: katex
 
 -   AutoMoDe is an automatic modular control software design process for swarm robotics
 -   It assembles predefined behaviours and transitions modules as a Probabilistic Finite State Machine (PFSM)
--   Several versions (named flavours) of AutoMoDe exist, each with different modules, optimization algorithms, form of the control software, etc.
+-   Several versions (named flavours) of AutoMoDe exist, each with different modules, optimization algorithm, form of the control software, etc.
 -   All of them are designed for the e-puck robot
 
 ---
